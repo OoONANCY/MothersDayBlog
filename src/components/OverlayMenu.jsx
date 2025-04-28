@@ -1,14 +1,29 @@
-import { FiX } from 'react-icons/fi'; 
+import { FiX } from 'react-icons/fi';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const OverlayMenu = ({ isOpen, onClose }) => {
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => setShowAnimation(true), 10);
+    } else {
+      setShowAnimation(false);
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 w-screen h-screen bg-black bg-opacity-95 z-50 text-white flex flex-col items-start px-24 py-20" style={{ width: '1920px', height: '1080px' }}>
-      {/* Close Icon */}
-      <button 
-        onClick={onClose} 
+    <div className={`fixed inset-0 bg-black z-50 text-white transition-all duration-500 ease-out 
+      ${showAnimation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      style={{ width: '1920px', height: '1080px' }}
+    >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
         className="absolute top-12 left-16 text-white text-4xl"
       >
         <FiX />
@@ -26,27 +41,72 @@ const OverlayMenu = ({ isOpen, onClose }) => {
         </svg>
       </div>
 
-      {/* Sidebar Links */}
-      <div className="flex flex-col mt-40 space-y-8 text-4xl font-serif font-light">
-        <Link to="/" onClick={onClose} className="hover:underline">Home</Link>
-        <Link to="/about" onClick={onClose} className="hover:underline">About me</Link>
-        <Link to="/categories" onClick={onClose} className="hover:underline">Categories</Link>
-        <Link to="/contact" onClick={onClose} className="hover:underline">Contact</Link>
+      {/* Sidebar Container */}
+      <div
+        className="absolute flex flex-col space-y-10 font-serif"
+        style={{
+          width: '706px',
+          height: '449px',
+          top: '316px',
+          left: '240px',
+          fontSize: '48px',
+        }}
+      >
+        {['Home', 'About me', 'Categories', 'Contact'].map((item, index) => (
+          <Link
+            to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s/g, '-')}`}
+            key={index}
+            onClick={onClose}
+            onMouseEnter={() => setHoveredLink(item)}
+            onMouseLeave={() => setHoveredLink(null)}
+            className={`transition-all duration-300 ${hoveredLink === item ? 'text-white' : 'text-gray-400'
+              }`}
+          >
+            {hoveredLink === item ? `--- ${item}` : item}
+          </Link>
+        ))}
       </div>
 
-      {/* Newsletter Box */}
-      <div className="absolute top-1/2 right-16 bg-transparent border border-gray-700 p-8 w-[600px]">
+      {/* Newsletter Container */}
+      <div
+        className="absolute border border-gray-700 p-8"
+        style={{
+          width: '828px',
+          height: '289px',
+          top: '396px',
+          left: '852px',
+        }}
+      >
         <h2 className="text-2xl font-serif mb-4">Newsletter</h2>
-        <p className="text-gray-400 mb-4 text-sm">Subscribe to receive exclusive content updates, travel & photo tips!</p>
-        <form className="flex items-center space-x-2">
-          <input 
-            type="email" 
-            placeholder="example@" 
-            className="flex-1 bg-transparent border-b border-gray-400 outline-none text-white placeholder-gray-500 py-2"
-          />
-          <button type="submit" className="bg-white text-black px-4 py-2 text-sm font-semibold">Subscribe</button>
-        </form>
+        <p className="text-gray-400 mb-6 text-sm">
+          Subscribe to receive exclusive content updates, travel & photo tips!
+        </p>
+
+        {/* Horizontal Flex */}
+        <div className="flex items-center">
+          {/* Left side: Label + Input */}
+          <div className="flex flex-col">
+            <label className="text-sm text-white mb-2">Email address</label>
+            <input
+              type="email"
+              placeholder="example@"
+              className="w-[450px] bg-transparent border-b border-gray-400 outline-none text-white placeholder-gray-500 py-2"
+            />
+          </div>
+
+          {/* Right side: Subscribe Button */}
+          <button
+            className="ml-8 bg-white text-black font-semibold"
+            style={{
+              width: '245px',
+              height: '55px',
+            }}
+          >
+            Subscribe
+          </button>
+        </div>
       </div>
+
     </div>
   );
 };
