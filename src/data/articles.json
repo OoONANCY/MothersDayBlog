@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "When Is The Best Time of Year To Visit Japan?",
+    "excerpt": "The good news for travelers is that there is no single best time of year to travel to Japan...",
+    "category": "Asia",
+    "readingTime": "5 min read",
+    "date": "June 12, 2023",
+    "image": "https://images.pexels.com/photos/590478/pexels-photo-590478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Coventry City Guide Including Coventry Hotels",
+    "excerpt": "The historic city of Coventry is a cultural capital offering unique architecture, vibrant food scenes, and centuries of heritage to explore.",
+    "category": "Europe",
+    "readingTime": "4 min read",
+    "date": "May 28, 2023",
+    "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Planning a Trip to Japan in the Time of Covid",
+    "excerpt": "Japan has recently reopened to tourists, but there are still some restrictions and considerations to keep in mind when planning your visit.",
+    "category": "Asia",
+    "readingTime": "6 min read",
+    "date": "April 15, 2023",
+    "image": "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "How to Choose an African Safari (That's Right for You)",
+    "excerpt": "Africa offers a wide range of safari experiences, from luxury lodges to budget camping trips. Learn how to pick the right one for your travel style.",
+    "category": "Africa",
+    "readingTime": "7 min read",
+    "date": "March 22, 2023",
+    "image": "https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Island Hopping in Southeast Asia: A Complete Guide",
+    "excerpt": "Southeast Asia is home to thousands of beautiful islands. Here's how to plan the perfect island-hopping adventure.",
+    "category": "Asia",
+    "readingTime": "8 min read",
+    "date": "February 10, 2023",
+    "image": "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "The Ultimate Road Trip Through Portugal",
+    "excerpt": "Portugal offers stunning coastal drives, charming villages, and historic cities. Plan your perfect Portuguese road trip with this guide.",
+    "category": "Europe",
+    "readingTime": "6 min read",
+    "date": "January 25, 2023",
+    "image": "https://images.pexels.com/photos/2675268/pexels-photo-2675268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "featured": false
+  }
+]

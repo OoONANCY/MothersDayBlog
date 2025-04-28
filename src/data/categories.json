@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Asia",
+    "icon": "🌏",
+    "slug": "asia"
+  },
+  {
+    "id": 2,
+    "name": "Europe",
+    "icon": "🏰",
+    "slug": "europe"
+  },
+  {
+    "id": 3,
+    "name": "Africa",
+    "icon": "🌍",
+    "slug": "africa"
+  },
+  {
+    "id": 4,
+    "name": "Americas",
+    "icon": "🌎",
+    "slug": "americas"
+  },
+  {
+    "id": 5,
+    "name": "Oceania",
+    "icon": "🏝️",
+    "slug": "oceania"
+  },
+  {
+    "id": 6,
+    "name": "Budget",
+    "icon": "💰",
+    "slug": "budget"
+  },
+  {
+    "id": 7,
+    "name": "Luxury",
+    "icon": "✨",
+    "slug": "luxury"
+  }
+]

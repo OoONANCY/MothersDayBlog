@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Asia",
+    "count": 24
+  },
+  {
+    "id": 2,
+    "name": "Australia",
+    "count": 12
+  },
+  {
+    "id": 3,
+    "name": "United States",
+    "count": 35
+  },
+  {
+    "id": 4,
+    "name": "Europe",
+    "count": 48
+  },
+  {
+    "id": 5,
+    "name": "East Asia",
+    "count": 18
+  }
+]
