@@ -8,7 +8,6 @@ const HeroCarousel = ({ slides }) => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [slides.length]);
 
@@ -25,7 +24,7 @@ const HeroCarousel = ({ slides }) => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-gray-100" style={{ height: '900px' }}>
+    <div className="relative overflow-hidden bg-gray-100 h-[900px]">
       {/* Sliding background */}
       <div
         className="flex h-full transition-transform duration-[1500ms] ease-in-out"
@@ -39,15 +38,66 @@ const HeroCarousel = ({ slides }) => {
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            {/* Dark overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
         ))}
       </div>
 
+      {/* White Card */}
+      <div
+        className="absolute bg-white text-black shadow-lg z-10 p-4 sm:p-6 lg:p-8"
+        style={{
+          width: '705px',
+          height: '498px',
+          left: '240px',
+          top: '402px',
+        }}
+      >
+        <div
+          className="absolute"
+          style={{
+            width: '605px',
+            height: '356px',
+            left: '71px',
+            top: '50px',
+          }}
+        >
+          {/* Category */}
+          <p className="mb-2" style={{ fontSize: '16px', lineHeight: '26px', color: '#030303' }}>
+            {slides[currentIndex].category}
+          </p>
+
+          {/* Title */}
+          <h2
+            className="mb-4 font-bold leading-tight"
+            style={{
+              fontFamily: `'Cormorant Garamond', serif`,
+              fontSize: '32px',
+              color: '#000000',
+            }}
+          >
+            {slides[currentIndex].title}
+          </h2>
+
+          {/* Excerpt */}
+          <p className="mb-6" style={{ fontSize: '14px', lineHeight: '22px', color: '#949799' }}>
+            {slides[currentIndex].excerpt}
+          </p>
+
+          {/* Read more button */}
+          <Link
+            to={`/articles/${slides[currentIndex].id}`}
+            className="inline-flex items-center justify-center bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors"
+            style={{ width: '155px', height: '55px' }}
+          >
+            Read more
+          </Link>
+        </div>
+      </div>
+
       {/* Navigation Buttons */}
       <div
-        className="absolute flex"
+        className="absolute flex z-20"
         style={{
           width: '128px',
           height: '64px',
@@ -55,7 +105,7 @@ const HeroCarousel = ({ slides }) => {
           left: '881px',
         }}
       >
-        {/* Left Button */}
+        {/* Left */}
         <button
           onClick={goToPrevious}
           aria-label="Previous slide"
@@ -72,7 +122,7 @@ const HeroCarousel = ({ slides }) => {
           </svg>
         </button>
 
-        {/* Right Button */}
+        {/* Right */}
         <button
           onClick={goToNext}
           aria-label="Next slide"
@@ -88,46 +138,6 @@ const HeroCarousel = ({ slides }) => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
           </svg>
         </button>
-      </div>
-
-      {/* White Card */}
-      <div
-        className="absolute bg-white text-black p-8 flex flex-col justify-start shadow-lg"
-        style={{
-          width: '605px',
-          height: '498px',
-          left: '290px',
-          top: '402px',
-        }}
-      >
-        {/* Category Text */}
-        <p className="text-sm mb-2" style={{ fontSize: '16px' }}>
-          {slides[currentIndex].category}
-        </p>
-        
-        {/* Title */}
-        <h2
-          className="font-bold mb-4 leading-tight"
-          style={{
-            fontFamily: `'Cormorant Garamond', serif`,
-            fontSize: '32px',
-          }}
-        >
-          {slides[currentIndex].title}
-        </h2>
-
-        {/* Excerpt */}
-        <p className="text-gray-600 mb-6 text-sm">
-          {slides[currentIndex].excerpt}
-        </p>
-
-        {/* Read more button */}
-        <Link
-          to={`/articles/${slides[currentIndex].id}`}
-          className="inline-block bg-black text-white px-4 py-2 text-sm font-medium hover:bg-gray-800 transition-colors"
-        >
-          Read more
-        </Link>
       </div>
     </div>
   );
