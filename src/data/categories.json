@@ -3,42 +3,63 @@
     "id": 1,
     "name": "Asia",
     "icon": "🌏",
-    "slug": "asia"
+    "slug": "asia",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   },
   {
     "id": 2,
     "name": "Europe",
     "icon": "🏰",
-    "slug": "europe"
+    "slug": "europe",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   },
   {
     "id": 3,
     "name": "Africa",
     "icon": "🌍",
-    "slug": "africa"
+    "slug": "africa",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   },
   {
     "id": 4,
     "name": "Americas",
     "icon": "🌎",
-    "slug": "americas"
+    "slug": "americas",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   },
   {
     "id": 5,
     "name": "Oceania",
     "icon": "🏝️",
-    "slug": "oceania"
+    "slug": "oceania",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   },
   {
     "id": 6,
     "name": "Budget",
     "icon": "💰",
-    "slug": "budget"
+    "slug": "budget",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   },
   {
     "id": 7,
     "name": "Luxury",
     "icon": "✨",
-    "slug": "luxury"
+    "slug": "luxury",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Luxury",
+    "icon": "✨",
+    "slug": "luxury",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Luxury",
+    "icon": "✨",
+    "slug": "luxury",
+    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
   }
 ]

@@ -1,90 +1,106 @@
-import { useState, useRef } from 'react';
+// CategoriesSection.jsx
+import { useRef } from 'react';
 
-const CategoryCard = ({ category, isActive, onClick }) => {
+const CategoryCard = ({ category, onClick }) => {
   return (
-    <div 
+    <div
       onClick={onClick}
-      className={`min-w-[120px] h-[120px] flex flex-col items-center justify-center text-center cursor-pointer border border-gray-200 p-4 transition-all ${
-        isActive 
-          ? 'bg-black text-white' 
-          : 'bg-white text-black hover:bg-gray-50'
-      }`}
+      className="relative flex-shrink-0 w-[215px] h-[215px] overflow-visible"
     >
-      <div className="text-2xl mb-2">{category.icon}</div>
-      <div className="text-sm font-medium">{category.name}</div>
+      {/* Scale this entire wrapper on hover */}
+      <div
+        className="relative w-full h-full origin-center transition-transform duration-300 ease-in-out group hover:scale-[1.186] hover:z-10"
+        style={{ transformOrigin: 'center' }}
+      >
+        {/* Image background - fades in */}
+        <div
+          className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          style={{
+            backgroundImage: `url(${category.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+
+        {/* Content on top */}
+        <div className="w-full h-full bg-black text-white flex flex-col items-center justify-center relative z-10 text-center transition-opacity duration-300 group-hover:opacity-0">
+          <div className="mb-1 w-6 h-0.5 bg-white" />
+          <div className="text-lg font-medium">{category.name}</div>
+        </div>
+      </div>
     </div>
   );
 };
 
-const CategoriesSection = ({ categories, onCategorySelect, activeCategory }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+
+const CategoriesSection = ({ categories, onCategorySelect }) => {
   const containerRef = useRef(null);
-  
+
   const scroll = (direction) => {
     const container = containerRef.current;
     if (!container) return;
-    
-    const scrollAmount = 240; // Approx width of two cards
-    const newPosition = direction === 'left' 
-      ? Math.max(0, scrollPosition - scrollAmount)
-      : Math.min(
-          container.scrollWidth - container.clientWidth,
-          scrollPosition + scrollAmount
-        );
-    
-    container.scrollTo({
-      left: newPosition,
-      behavior: 'smooth',
-    });
-    
-    setScrollPosition(newPosition);
+
+    const scrollAmount = 215 * 7 + 6 * 16;
+    const newPosition =
+      direction === 'left'
+        ? container.scrollLeft - scrollAmount
+        : container.scrollLeft + scrollAmount;
+
+    container.scrollTo({ left: newPosition, behavior: 'smooth' });
   };
-  
+
   return (
-    <section className="my-12">
-      <div className="px-4 md:px-8 lg:px-16">
-        <h2 className="text-xl font-semibold mb-6">Explore by category</h2>
-        
-        <div className="relative">
-          {/* Previous button */}
-          <button 
+    <section
+      className="relative mx-auto"
+      style={{
+        width: '1685px',
+        marginTop: '64px',
+        overflow: 'visible',
+      }}
+    >
+      {/* Header with title and nav buttons */}
+      <div className="flex items-center justify-between mb-[0px]">
+        <h2 className="text-xl font-semibold">Explore by category</h2>
+        <div className="flex gap-2 mr-40">
+          <button
             onClick={() => scroll('left')}
-            className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-1 shadow-md z-10"
-            aria-label="Scroll categories left"
+            className="w-10 h-10 bg-black text-white flex items-center justify-center"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M15 19l-7-7 7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          
-          {/* Categories container */}
-          <div 
-            ref={containerRef}
-            className="flex overflow-x-auto scrollbar-hide gap-4 pb-4 pt-2 px-2 -mx-2 scroll-smooth"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {categories.map((category) => (
-              <CategoryCard 
-                key={category.id}
-                category={category}
-                isActive={activeCategory === category.slug}
-                onClick={() => onCategorySelect(category.slug)}
-              />
-            ))}
-          </div>
-          
-          {/* Next button */}
-          <button 
+          <button
             onClick={() => scroll('right')}
-            className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-1 shadow-md z-10"
-            aria-label="Scroll categories right"
+            className="w-10 h-10 bg-black text-white flex items-center justify-center"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M9 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
       </div>
+
+      {/* Carousel of cards */}
+      <div
+        ref={containerRef}
+        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide pt-[47px]"
+        style={{
+          height: '367px',
+          // overflow: 'visible',
+          width: '1685',
+        }}
+      >
+        {categories.map((category) => (
+          <CategoryCard
+            key={category.id}
+            category={category}
+            onClick={() => onCategorySelect(category.slug)}
+          />
+        ))}
+      </div>
+
+
     </section>
   );
 };
