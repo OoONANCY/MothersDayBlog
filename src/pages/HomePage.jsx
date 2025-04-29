@@ -25,22 +25,22 @@ const HomePage = () => {
   const slides = [
     {
       id: 1,
-      title: 'Discover Nature',
-      excerpt: 'Explore the beauty of nature through our articles.',
+      title: 'Discover Nature ty of nature through our ',
+      excerpt: 'Explore the beauty of nature through our articles. ty of nature articles',
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80',
       category: "travel",
     },
     {
       id: 2,
-      title: 'Technology Trends',
-      excerpt: 'Stay updated with the latest tech trends of 2025.',
+      title: 'Technology Trends ty of nature through our',
+      excerpt: 'Stay updated with the latest tech trends of 2025. ty of nature through articles',
       image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1350&q=80',
       category: "beaches",
     },
     {
       id: 3,
-      title: 'Art & Design',
-      excerpt: 'Dive into the world of creativity and design.',
+      title: 'Art & Design ty of nature through our',
+      excerpt: 'Dive into the world of creativity and design. ty of nature through article',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80',
       category: "hehaw",
     },

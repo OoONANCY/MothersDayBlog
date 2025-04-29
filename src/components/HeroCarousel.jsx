@@ -59,20 +59,20 @@ const HeroCarousel = ({ slides }) => {
             width: '605px',
             height: '356px',
             left: '71px',
-            top: '50px',
+            top: '75px',
           }}
         >
           {/* Category */}
-          <p className="mb-2" style={{ fontSize: '16px', lineHeight: '26px', color: '#030303' }}>
+          <p className="mb-2" style={{ fontSize: '18px', lineHeight: '26px', color: '#030303' }}>
             {slides[currentIndex].category}
           </p>
 
           {/* Title */}
           <h2
-            className="mb-4 font-bold leading-tight"
+            className="mb-4 leading-tight"
             style={{
               fontFamily: `'Cormorant Garamond', serif`,
-              fontSize: '32px',
+              fontSize: '60px',
               color: '#000000',
             }}
           >
@@ -80,7 +80,7 @@ const HeroCarousel = ({ slides }) => {
           </h2>
 
           {/* Excerpt */}
-          <p className="mb-6" style={{ fontSize: '14px', lineHeight: '22px', color: '#949799' }}>
+          <p className="mb-6" style={{ fontSize: '22px', lineHeight: '32px', color: '#949799' }}>
             {slides[currentIndex].excerpt}
           </p>
 

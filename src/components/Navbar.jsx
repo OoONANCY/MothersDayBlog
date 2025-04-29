@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Center Title */}
         <div
-          className="text-white text-lg sm:text-2xl lg:text-[32px] font-bold text-center flex-grow"
+          className="text-white text-lg sm:text-2xl lg:text-[35px] text-center flex-grow"
           style={{ fontFamily: `'Cormorant Garamond', serif` }}
         >
           Personal Travel Blog
