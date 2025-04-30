@@ -19,8 +19,8 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="absolute top-0 left-0 w-full z-40">
-        <div className="mx-auto max-w-[1440px] flex items-center justify-between px-4 pt-10">
+      <nav className="absolute top-0 left-0 w-full z-40 px-[150px]">
+        <div className="mx-auto w-full flex items-center justify-between pt-10">
           {/* Hamburger (mobile) */}
           <div
             className="cursor-pointer lg:hidden"
@@ -43,10 +43,10 @@ const Navbar = () => {
 
           {/* Center Logo */}
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 text-white text-xl sm:text-2xl lg:text-[35px]"
+            className="absolute left-1/2 transform -translate-x-1/2 text-white text-xl sm:text-2xl lg:text-[30px]"
             style={{ fontFamily: `'Cormorant Garamond', serif` }}
           >
-            Personal Travel Blog
+            Mother's Day Blog
           </div>
 
           {/* Search Icon (right) */}
