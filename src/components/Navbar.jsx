@@ -33,13 +33,18 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Hamburger (desktop overlay menu) */}
+          {/* Hamburger / Close Icon for desktop */}
           <div
             className="hidden lg:block cursor-pointer"
-            onClick={() => setMenuOpen(true)}
+            onClick={() => setMenuOpen(prev => !prev)}
           >
-            <FiMenu className="text-white w-8 h-8" />
+            {menuOpen ? (
+              <FiX className="text-white w-8 h-8 transition-transform duration-300 rotate-90" />
+            ) : (
+              <FiMenu className="text-white w-8 h-8 transition-transform duration-300" />
+            )}
           </div>
+
 
           {/* Center Logo */}
           <div
