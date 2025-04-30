@@ -19,49 +19,44 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav
-        className="z-40 flex items-center justify-between px-4 sm:px-8 lg:px-0 lg:absolute w-full lg:w-[1440px]"
-        style={{
-          top: '40px',
-          left: '240px',
-          height: '39px',
-        }}
-      >
-        {/* Hamburger Toggle */}
-        <div
-          className="cursor-pointer lg:hidden flex-shrink-0"
-          onClick={() => setMobileNavOpen(prev => !prev)}
-        >
-          {mobileNavOpen ? (
-            <FiX className="text-white w-8 h-8 transition-transform duration-300 rotate-90" />
-          ) : (
-            <FiMenu className="text-white w-8 h-8 transition-transform duration-300" />
-          )}
-        </div>
+      <nav className="absolute top-0 left-0 w-full z-40">
+        <div className="mx-auto max-w-[1440px] flex items-center justify-between px-4 pt-10">
+          {/* Hamburger (mobile) */}
+          <div
+            className="cursor-pointer lg:hidden"
+            onClick={() => setMobileNavOpen(prev => !prev)}
+          >
+            {mobileNavOpen ? (
+              <FiX className="text-white w-8 h-8 rotate-90 transition-transform duration-300" />
+            ) : (
+              <FiMenu className="text-white w-8 h-8 transition-transform duration-300" />
+            )}
+          </div>
 
-        {/* Overlay Menu Hamburger (desktop only) */}
-        <div
-          className="hidden lg:block cursor-pointer flex-shrink-0"
-          onClick={() => setMenuOpen(true)}
-        >
-          <FiMenu className="text-white w-8 h-8" />
-        </div>
+          {/* Hamburger (desktop overlay menu) */}
+          <div
+            className="hidden lg:block cursor-pointer"
+            onClick={() => setMenuOpen(true)}
+          >
+            <FiMenu className="text-white w-8 h-8" />
+          </div>
 
-        {/* Center Title */}
-        <div
-          className="text-white text-lg sm:text-2xl lg:text-[35px] text-center flex-grow"
-          style={{ fontFamily: `'Cormorant Garamond', serif` }}
-        >
-          Personal Travel Blog
-        </div>
+          {/* Center Logo */}
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 text-white text-xl sm:text-2xl lg:text-[35px]"
+            style={{ fontFamily: `'Cormorant Garamond', serif` }}
+          >
+            Personal Travel Blog
+          </div>
 
-        {/* Search Icon */}
-        <div className="flex-shrink-0">
-          <FiSearch className="text-white w-8 h-8" />
+          {/* Search Icon (right) */}
+          <div>
+            <FiSearch className="text-white w-8 h-8" />
+          </div>
         </div>
       </nav>
 
-      {/* Mobile Collapsible Menu */}
+      {/* Mobile Nav Menu */}
       {mobileNavOpen && (
         <div className="lg:hidden bg-black bg-opacity-95 text-white absolute top-[90px] left-0 w-full z-30 px-6 py-8 animate-slide-down">
           <ul className="space-y-6 text-xl font-serif">
@@ -80,7 +75,7 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Full screen overlay menu (desktop) */}
+      {/* Desktop Overlay Menu */}
       <OverlayMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );

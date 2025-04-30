@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar';
 import articles from '../data/articles.json';
 import categories from '../data/categories.json';
 import destinations from '../data/destinations.json';
+import CategoryCarousel from '../components/CategoryCarousel';
 
 const HomePage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
