@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ArticlePage from './pages/ArticlePage';
 import instagramData from './data/instagram.json';
+import AboutPage from './pages/AboutPage';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/articles/:id" element={<ArticlePage />} />
+            <Route path="/about-me" element={<AboutPage />} />
             <Route path="*" element={
               <div className="py-20 text-center">
                 <h1 className="text-2xl font-bold mb-4">Page Not Found</h1>
