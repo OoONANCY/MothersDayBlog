@@ -4,7 +4,7 @@ A beautifully crafted React-based blog platform designed to celebrate motherhood
 
 ---
 
-## 📦 Project Setup
+# 📦 Project Setup
 
 To run this project locally:
 
