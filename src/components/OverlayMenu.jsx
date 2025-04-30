@@ -15,11 +15,19 @@ const OverlayMenu = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
+  const navItems = ['Home', 'About me', 'Categories', 'Contact'];
+
+  const getRoute = (item) => {
+    if (item === 'Home') return '/';
+    if (item === 'About me') return '/about';
+    return `/${item.toLowerCase().replace(/\s/g, '-')}`;
+  };
+
   return (
     <div
-      className={`fixed inset-0 z-30 text-white transition-all duration-500 ease-out ${showAnimation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-
+      className={`fixed inset-0 z-30 text-white transition-all duration-500 ease-out ${
+        showAnimation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
       style={{
         backgroundColor: 'rgba(0, 0, 0, 0.9)',
         backdropFilter: 'blur(2px)',
@@ -27,7 +35,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
     >
       <div className="relative w-full h-full max-w-[1920px] mx-auto">
 
-        {/* Menu Links - Centered vertically, aligned left */}
+        {/* Menu Links */}
         <div
           className="absolute flex flex-col space-y-10 font-serif"
           style={{
@@ -38,10 +46,10 @@ const OverlayMenu = ({ isOpen, onClose }) => {
             transform: 'translateY(-50%)',
           }}
         >
-          {['Home', 'About me', 'Categories', 'Contact'].map((item, index) => (
+          {navItems.map((item, index) => (
             <Link
-              to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s/g, '-')}`}
               key={index}
+              to={getRoute(item)}
               onClick={onClose}
               onMouseEnter={() => setHoveredLink(item)}
               onMouseLeave={() => setHoveredLink(null)}
@@ -54,7 +62,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
           ))}
         </div>
 
-        {/* Newsletter Box - Right side */}
+        {/* Newsletter Box */}
         <div
           className="absolute border border-gray-700 p-8 backdrop-blur-sm"
           style={{

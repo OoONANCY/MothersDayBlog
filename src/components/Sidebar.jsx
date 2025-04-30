@@ -27,10 +27,7 @@ const AuthorProfile = () => {
       <div className="absolute top-[152px] w-full text-center px-6 z-10">
         <h3 className="text-[26px] font-bold font-serif mb-4">Nancy Sharma</h3>
         <p className="text-sm text-gray-700 leading-relaxed">
-          For as long as I can remember I’ve been obsessed with the idea of travel.
-          I was always that person who was forever daydreaming of foreign lands
-          and unfamiliar cultures; coming up with travel itineraries that would
-          challenge my perceptions and help me gain a deeper understanding of the world.
+          Born in the valleys of Jammu and Kashmir, I'm a CS student with a chaotic collection of passions. One minute I'm coding, the next I'm working on my "business ideas" or hunting for the perfect momos. 100% powered by endless curiosity.
         </p>
       </div>
 

@@ -1,27 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Asia",
-    "count": 24
+    "name": "Spa Retreats for Moms",
+    "image": "https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     "id": 2,
-    "name": "Australia",
-    "count": 12
+    "name": "Family-Friendly Beaches",
+    "image": "https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     "id": 3,
-    "name": "United States",
-    "count": 35
+    "name": "Romantic Countryside Escapes",
+    "image": "https://images.pexels.com/photos/1108565/pexels-photo-1108565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     "id": 4,
-    "name": "Europe",
-    "count": 48
-  },
-  {
-    "id": 5,
-    "name": "East Asia",
-    "count": 18
+    "name": "Garden Getaways",
+    "image": "https://images.pexels.com/photos/1458694/pexels-photo-1458694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ]

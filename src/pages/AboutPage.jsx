@@ -27,56 +27,63 @@ const AboutPage = () => {
 
         {/* Quote */}
         <p className="italic text-gray-500 text-lg mb-10 border-t border-gray-300 pt-6 max-w-[600px] mx-auto">
-          Some beautiful paths can't be discovered without getting lost.
+          Why choose one passion when you can sample them all?
         </p>
 
-        {/* Paragraph */}
+        {/* Paragraph - Updated with fun About Me content */}
         <div className="text-sm text-gray-700 max-w-3xl mx-auto leading-relaxed mb-16">
-          <p>
-            For as long as I can remember I’ve been obsessed with the idea of travel.
-            I was always that person who was forever daydreaming of foreign lands
-            and unfamiliar cultures; coming up with travel itineraries that would
-            challenge my perceptions and help me gain a deeper understanding of the world.
+          <p className="mb-4">
+            Born and raised in the breathtaking valleys of Jammu and Kashmir (yes, it's as pretty as the postcards!), I'm that girl who's perpetually juggling too many hobbies while somehow managing to code my way through a computer science degree.
+          </p>
+          <p className="mb-4">
+            My brain works in mysterious ways—one minute I'm debugging, the next I'm vibing to a song I've had on repeat for three days straight. Balance? Never heard of her.
+          </p>
+          <p className="mb-4">
+            I'm a firm believer that breakfast foods should be served at all hours, that the best conversations happen after midnight, and that there's no problem a good cup of kahwa tea can't at least temporarily solve.
           </p>
         </div>
 
         {/* Side-by-side images - aligned to content box width */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 px-4">
-          <div className="bg-gray-300 h-[550px] w-full flex items-center justify-center">
-            <span className="text-gray-500">Image 1 Placeholder</span>
+          <div className="h-[550px] w-full flex items-center justify-center">
+            <img
+              src="https://www.japannakama.co.uk/wp-content/uploads/2024/12/10-Iconic-Female-Characters-in-Studio-Ghibli-Films.webp" // replace with your image URL
+              alt="Image 1"
+              className="h-full w-full object-cover"
+            />
           </div>
-          <div className="bg-gray-300 h-[550px] w-full flex items-center justify-center">
-            <span className="text-gray-500">Image 2 Placeholder</span>
+          <div className="h-[550px] w-full flex items-center justify-center">
+            <img
+              src="https://preview.redd.it/generate-studio-ghibli-style-images-with-chatgpt-heres-my-v0-v1kmyz9y1ere1.png?width=640&crop=smart&auto=webp&s=15a315e383a5d52ecd49285110c3ce8137f3d39c" // replace with your image URL
+              alt="Image 2"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
 
-        {/* Bulleted List and Paragraph */}
+        {/* More Fun About Me Content */}
         <div className="text-left max-w-4xl mx-auto text-sm text-gray-800 leading-loose">
           <p className="mb-4">
-            To keep you on the road to safety, here are a few basic tips for motorists at rail crossings:
+            My friends describe me as "chaotically organized" — my Google Calendar is color-coded to perfection, but I'll still show up five minutes late with mismatched socks and an elaborate story about why.
           </p>
-          <ul className="list-disc list-inside mb-6 space-y-2">
-            <li>Expect a train at any time. Trains can run anytime of day or night, on any track, in any direction.</li>
-            <li>Don’t be fooled. The train is closer and faster than you think. It’s easy to misjudge a train’s speed and distance, especially at night. If you see a train, just wait.</li>
-            <li>Trains can’t stop quickly or swerve; be prepared to yield.</li>
-            <li>Stop and wait when gates are down or lights are flashing...</li>
-          </ul>
-          <p>
-            These tips come from the safety experts at Voith Turbo, York, Pa., which manufactures a
-            device that helps trains with braking to make train travel even better...
+          <p className="mb-6">
+            Current obsessions include: Studio Ghibli films (Howl's Moving Castle has my whole heart), learning how to roller skate without embarrassing myself completely, and convincing everyone I know that my homemade cherry jam is worth the sticky kitchen disaster it creates.
           </p>
           <p className="mb-4">
-            To keep you on the road to safety, here are a few basic tips for motorists at rail crossings:
+            When I'm not convincing my laptop to cooperate with my coding assignments, you can find me:
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2">
-            <li>Expect a train at any time. Trains can run anytime of day or night, on any track, in any direction.</li>
-            <li>Don’t be fooled. The train is closer and faster than you think. It’s easy to misjudge a train’s speed and distance, especially at night. If you see a train, just wait.</li>
-            <li>Trains can’t stop quickly or swerve; be prepared to yield.</li>
-            <li>Stop and wait when gates are down or lights are flashing...</li>
+            <li>Hunting down the perfect momos in hidden street corners</li>
+            <li>Creating Spotify playlists for oddly specific scenarios like "walking dramatically in the rain while pretending you're in a music video"</li>
+            <li>Attempting to teach my dog to high-five (progress: minimal)</li>
+            <li>Collecting vintage film cameras I definitely don't need but absolutely must have</li>
+            <li>On a mission to pet every street dog in my neighborhood. Current count: 23 and counting! 🐕</li>
           </ul>
+          <p className="mb-4">
+            I once spent an entire weekend building a website just to catalog all my favorite street food spots, complete with a sophisticated rating system based on taste, ambiance, and "likelihood of finding a hair in your food." My friends now consult it before any outing.
+          </p>
           <p>
-            These tips come from the safety experts at Voith Turbo, York, Pa., which manufactures a
-            device that helps trains with braking to make train travel even better...
+            So that's me—part tech nerd, part creative hurricane, 100% powered by chai and curiosity. My tabs are always too many, my projects are always unfinished, and my enthusiasm is always maxed out. Let's be friends?
           </p>
         </div>
       </section>

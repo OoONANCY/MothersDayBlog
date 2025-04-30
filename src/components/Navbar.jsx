@@ -23,7 +23,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             menuOpen ? 'text-white' : 'text-black'
           }`}
         >
-          Personal Travel Blog
+          Mother's Day Blog
         </h1>
       </Link>
 

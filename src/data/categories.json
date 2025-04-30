@@ -1,65 +1,56 @@
 [
   {
     "id": 1,
-    "name": "Asia",
-    "icon": "🌏",
-    "slug": "asia",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Gift Ideas",
+    "slug": "gift-ideas",
+    "image": "https://static1.squarespace.com/static/5ed4e0d2368e221ec2333790/5ed5047c2a6c4c5afdbf2952/640a19c94120ee7e730771a2/1678714185647/AdobeStock_491418682.jpeg?format=1500w"
   },
   {
     "id": 2,
-    "name": "Europe",
-    "icon": "🏰",
-    "slug": "europe",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Family Activities",
+    "slug": "family-activities",
+    "image": "https://selfsufficientkids.com/wp-content/uploads/2021/03/family-bonding-activities-build-cohesion.jpg"
   },
   {
     "id": 3,
-    "name": "Africa",
-    "icon": "🌍",
-    "slug": "africa",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Mom Stories",
+    "slug": "mom-stories",
+    "image": "https://www.mamasorganizedchaos.com/wp-content/uploads/2018/08/real-moms-real-stories.jpg.webp"
   },
   {
     "id": 4,
-    "name": "Americas",
-    "icon": "🌎",
-    "slug": "americas",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Mom-Friendly Destinations",
+    "slug": "mom-friendly-destinations",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcY38Z76PaE36JI1As8jtv3xJzuBhPuyepOw&s"
   },
   {
     "id": 5,
-    "name": "Oceania",
-    "icon": "🏝️",
-    "slug": "oceania",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Healthy Recipes for Moms",
+    "slug": "healthy-recipes-for-moms",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     "id": 6,
-    "name": "Budget",
-    "icon": "💰",
-    "slug": "budget",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "DIY Crafts with Kids",
+    "slug": "diy-crafts-with-kids",
+    "image": "https://media.istockphoto.com/id/639271192/photo/preschool-teacher-with-kids-having-creative-activities.jpg?s=612x612&w=0&k=20&c=o4IhMZFhKzAFn6CWIVCAxXHEhuFOr6bMwNzLJlTF6oA="
   },
   {
     "id": 7,
-    "name": "Luxury",
-    "icon": "✨",
-    "slug": "luxury",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Letters to Mom",
+    "slug": "letters-to-mom",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/1*65tyrnyMp9WrSw4XQEkBMQ@2x.jpeg"
   },
   {
     "id": 8,
-    "name": "Luxury",
-    "icon": "✨",
-    "slug": "luxury",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Motherhood & Mental Health",
+    "slug": "motherhood-mental-health",
+    "image": "https://media.istockphoto.com/id/2001200360/photo/portrait-of-mother-and-newborn-son.jpg?s=612x612&w=0&k=20&c=stWtqM7oyIul_6lTh_8fypgfDKCc9fzaxCm7bG1K43k="
   },
   {
     "id": 9,
-    "name": "Luxury",
-    "icon": "✨",
-    "slug": "luxury",
-    "image": "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+    "name": "Mother's Day Events",
+    "slug": "mothers-day-events",
+    "image": "https://images.pexels.com/photos/935985/pexels-photo-935985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ]

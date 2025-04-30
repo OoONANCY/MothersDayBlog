@@ -26,25 +26,25 @@ const HomePage = () => {
   const slides = [
     {
       id: 1,
-      title: 'Discover Nature ty of nature through our ',
-      excerpt: 'Explore the beauty of nature through our articles. ty of nature articles',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80',
-      category: "travel",
+      title: 'The Beauty of Motherhood',
+      excerpt: 'Explore touching stories and heartfelt messages that honor the unconditional love of mothers everywhere.',
+      image: 'https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
       id: 2,
-      title: 'Technology Trends ty of nature through our',
-      excerpt: 'Stay updated with the latest tech trends of 2025. ty of nature through articles',
-      image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1350&q=80',
-      category: "beaches",
+      title: 'Modern Moms & Timeless Love',
+      excerpt: 'Discover how today’s tech-savvy moms balance love, career, and care with inspiring grace.',
+      image: 'https://pilbox.themuse.com/image.jpg?filter=antialias&h=343&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2F21109.jpg&w=700',
+      category: "inspiration",
     },
     {
       id: 3,
-      title: 'Art & Design ty of nature through our',
-      excerpt: 'Dive into the world of creativity and design. ty of nature through article',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80',
-      category: "hehaw",
+      title: 'Creative Gifts for Mom',
+      excerpt: 'Get inspired by DIY ideas and artistic creations that make the perfect heartfelt gifts this Mother’s Day.',
+      image: 'https://images.unsplash.com/photo-1504629141121-a95007fe9190?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      category: "gifts",
     },
+    
   ];
 
   
